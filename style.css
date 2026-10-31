@@ -1,0 +1,68 @@
+:root {
+  --biru: #1550d6;
+  --biru-tua: #0b1f4d;
+  --soft: #f3f7ff;
+}
+body { font-family: "Segoe UI", system-ui, sans-serif; color: #1c2540; }
+.bg-soft { background: var(--soft); }
+.text-primary-dark { color: var(--biru-tua); }
+.btn-primary { background: var(--biru); border-color: var(--biru); }
+.btn-outline-primary { color: var(--biru); border-color: var(--biru); }
+.btn-outline-primary:hover { background: var(--biru); }
+.text-primary, .nav-link.active { color: var(--biru) !important; }
+.brand-icon { font-size: 2rem; color: var(--biru); }
+.navbar .nav-link { font-size: .9rem; }
+
+/* Hero */
+.hero {
+  padding: 90px 0 80px;
+  background: linear-gradient(120deg, #eaf1ff 0%, #f8fbff 55%, #d9e6ff 100%);
+}
+.hero-title { font-size: clamp(2.2rem, 5vw, 3.6rem); font-weight: 800; color: var(--biru-tua); line-height: 1.1; }
+.hero-title span { color: var(--biru); }
+.hero-card {
+  background: var(--biru-tua); color: #fff; border-radius: 18px;
+  padding: 36px 30px; box-shadow: 0 18px 40px rgba(11,31,77,.25);
+}
+.hero-card-title { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; }
+.hero-tags span {
+  display: inline-block; margin: 4px 6px 4px 0; padding: 6px 14px;
+  border: 1px solid rgba(255,255,255,.4); border-radius: 20px; font-size: .8rem; letter-spacing: 1px;
+}
+
+/* Fitur */
+.fitur-ikon {
+  width: 76px; height: 76px; margin: 0 auto 14px; border-radius: 50%;
+  background: #eaf1ff; color: var(--biru); font-size: 2rem;
+  display: flex; align-items: center; justify-content: center;
+}
+
+/* Kartu prodi */
+.prodi-card {
+  display: flex; align-items: center; gap: 14px; padding: 16px;
+  background: #fff; border-radius: 12px; text-decoration: none; color: inherit;
+  box-shadow: 0 2px 10px rgba(11,31,77,.08); transition: transform .15s, box-shadow .15s;
+}
+.prodi-card:hover { transform: translateY(-3px); box-shadow: 0 8px 20px rgba(11,31,77,.15); color: inherit; }
+.prodi-ikon {
+  width: 48px; height: 48px; border-radius: 50%; color: #fff; font-size: 1.3rem;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ic-0 { background: #1f6fe0; } .ic-1 { background: #16a085; } .ic-2 { background: #8e5bd1; }
+.ic-3 { background: #e5484d; } .ic-4 { background: #f08c1a; } .ic-5 { background: #2fa84f; }
+.ic-6 { background: #4f55c7; } .ic-7 { background: #7b8794; }
+
+/* Statistik */
+.stat-band { padding: 50px 0; background: linear-gradient(120deg, #e3edff, #f4f8ff); }
+.stat-band i { font-size: 2rem; color: var(--biru); }
+.stat-angka { font-size: 2.2rem; font-weight: 800; color: var(--biru-tua); line-height: 1.1; }
+
+/* Kutipan */
+.kutipan { border-left: 4px solid var(--biru); padding-left: 18px; color: #4b5675; font-style: italic; }
+.kutipan footer { font-style: normal; font-size: .9rem; margin-top: 8px; }
+
+/* Footer */
+.footer { background: var(--biru-tua); color: #cdd6ee; padding: 50px 0 24px; }
+.footer h6 { color: #fff; font-weight: 700; }
+.footer a { color: #cdd6ee; text-decoration: none; }
+.footer a:hover { color: #fff; }
