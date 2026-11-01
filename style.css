@@ -66,3 +66,23 @@ body { font-family: "Segoe UI", system-ui, sans-serif; color: #1c2540; }
 .footer h6 { color: #fff; font-weight: 700; }
 .footer a { color: #cdd6ee; text-decoration: none; }
 .footer a:hover { color: #fff; }
+
+/* Login */
+.login-body { min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(120deg, #eaf1ff 0%, #f8fbff 55%, #d9e6ff 100%); }
+.login-box { width: 100%; max-width: 400px; background: #fff; padding: 32px;
+  border-radius: 16px; box-shadow: 0 18px 40px rgba(11,31,77,.15); }
+
+/* Dashboard */
+.app-wrap { display: flex; min-height: calc(100vh - 62px); }
+.app-side { width: 230px; background: var(--biru-tua); padding: 16px 0; flex-shrink: 0; }
+.side-link { display: flex; align-items: center; gap: 10px; padding: 11px 22px;
+  color: #cdd6ee; text-decoration: none; font-size: .92rem; }
+.side-link:hover, .side-link.active { background: rgba(255,255,255,.1); color: #fff; }
+.side-link.disabled { opacity: .45; pointer-events: none; }
+.app-main { flex: 1; padding: 28px; min-width: 0; }
+.kartu-stat { display: flex; align-items: center; gap: 14px; background: #fff; padding: 18px;
+  border-radius: 12px; box-shadow: 0 2px 10px rgba(11,31,77,.08); }
+.kartu-stat i { font-size: 2rem; color: var(--biru); }
+.kartu-stat .angka { font-size: 1.7rem; font-weight: 800; color: var(--biru-tua); line-height: 1; }
+@media (max-width: 768px) { .app-side { display: none; } }
