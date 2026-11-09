@@ -14,6 +14,7 @@ Tugas mata kuliah Web Semantik (CRUD Page Web Tradisional).
 
 ## Akun Demo
 
+Semua akun memakai password **`password123`**.
 
 | Role | Username | Akses menu |
 |---|---|---|
