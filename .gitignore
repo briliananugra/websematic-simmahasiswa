@@ -1,4 +1,5 @@
-config.php
+config/config.php
 test.php
 tes.php
 setupadmin.php
+reset_pw.php

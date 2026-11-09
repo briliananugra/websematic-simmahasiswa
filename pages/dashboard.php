@@ -1,7 +1,7 @@
 <?php
-require_once __DIR__ . '/helper.php';
-require_once __DIR__ . '/koneksi.php';
-require_once __DIR__ . '/auth.php';
+require_once __DIR__ . '/../includes/helper.php';
+require_once __DIR__ . '/../config/koneksi.php';
+require_once __DIR__ . '/../includes/auth.php';
 wajib_login();
 
 $total_mhs      = hitung($koneksi, "SELECT COUNT(*) FROM mahasiswa");
@@ -11,7 +11,7 @@ $total_pengguna = hitung($koneksi, "SELECT COUNT(*) FROM pengguna");
 
 $judul      = 'Dashboard';
 $menu_aktif = 'dashboard';
-include __DIR__ . '/layout_atas.php';
+include __DIR__ . '/../includes/layout_atas.php';
 ?>
 
 <h4 class="fw-bold mb-1">Dashboard</h4>
@@ -26,4 +26,4 @@ include __DIR__ . '/layout_atas.php';
   <div class="col-6 col-lg-3"><div class="kartu-stat"><i class="bi bi-person-fill-gear"></i><div><div class="angka"><?= $total_pengguna ?></div>Pengguna</div></div></div>
 </div>
 
-<?php include __DIR__ . '/layout_bawah.php'; ?>
+<?php include __DIR__ . '/../includes/layout_bawah.php'; ?>

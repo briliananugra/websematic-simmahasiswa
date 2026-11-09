@@ -2,6 +2,7 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+require_once __DIR__ . '/../config/app.php';
 
 function sudah_login() {
     return !empty($_SESSION['id_pengguna']);
@@ -10,7 +11,7 @@ function sudah_login() {
 // Panggil di halaman yang wajib login
 function wajib_login() {
     if (!sudah_login()) {
-        header('Location: login.php');
+        header('Location: ' . BASE_URL . '/auth/login.php');
         exit;
     }
 }

@@ -22,12 +22,12 @@ $menu = [
 <?php foreach ($menu as [$kunci, $label, $ikon, $file, $boleh]): ?>
     <?php
     if (!in_array($role, $boleh, true)) continue;      // role ini tidak boleh lihat menu
-    $ada   = is_file(__DIR__ . '/' . $file);           // halaman sudah dibuat?
+    $ada   = is_file(__DIR__ . '/../pages/' . $file);          // halaman sudah dibuat?
     $kelas = 'side-link'
            . ($menu_aktif === $kunci ? ' active' : '')
            . (!$ada ? ' disabled' : '');
     ?>
-    <a class="<?= $kelas ?>" href="<?= $ada ? e($file) : '#' ?>">
+    <a class="<?= $kelas ?>" href="<?= $ada ? BASE_URL . '/pages/' . e($file) : '#' ?>">
         <i class="bi <?= $ikon ?>"></i> <?= e($label) ?>
     </a>
 <?php endforeach; ?>

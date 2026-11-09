@@ -1,6 +1,8 @@
 <?php
-require_once __DIR__ . '/koneksi.php';
-require_once __DIR__ . '/helper.php';
+require_once __DIR__ . '/config/app.php';
+require_once __DIR__ . '/config/koneksi.php';
+require_once __DIR__ . '/includes/helper.php';
+require_once __DIR__ . '/includes/auth.php';
 
 // Data universitas
 $r = mysqli_query($koneksi, "SELECT * FROM universitas ORDER BY id_universitas LIMIT 1");
@@ -38,7 +40,7 @@ $ikon = ['bi-pc-display','bi-bar-chart-fill','bi-book-fill','bi-heart-pulse','bi
   <title>SIM Mahasiswa - <?= e($nama_univ) ?></title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link href="style.css" rel="stylesheet">
+  <link href="<?= BASE_URL ?>/assets/css/style.css" rel="stylesheet">
 </head>
 <body>
 
@@ -64,7 +66,7 @@ $ikon = ['bi-pc-display','bi-bar-chart-fill','bi-book-fill','bi-heart-pulse','bi
         <li class="nav-item"><a class="nav-link" href="#tentang">Web Semantik</a></li>
         <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
       </ul>
-      <a href="login.php" class="btn btn-primary px-4"><i class="bi bi-person-fill me-1"></i> Login</a>
+      <a href="<?= BASE_URL ?>/auth/login.php" class="btn btn-primary px-4"><i class="bi bi-person-fill me-1"></i> Login</a>
     </div>
   </div>
 </nav>
@@ -136,7 +138,7 @@ $ikon = ['bi-pc-display','bi-bar-chart-fill','bi-book-fill','bi-heart-pulse','bi
       <?php endif; ?>
       <?php foreach ($prodi as $i => $p): ?>
       <div class="col-sm-6 col-lg-3">
-        <a href="login.php" class="prodi-card">
+        <a href="<?= BASE_URL ?>/auth/login.php" class="prodi-card">
           <span class="prodi-ikon ic-<?= $i % 8 ?>"><i class="bi <?= $ikon[$i % 8] ?>"></i></span>
           <span class="flex-grow-1">
             <strong class="d-block"><?= e($p['nama_program_studi']) ?></strong>
@@ -218,7 +220,7 @@ $ikon = ['bi-pc-display','bi-bar-chart-fill','bi-book-fill','bi-heart-pulse','bi
           <li><a href="#beranda">Beranda</a></li>
           <li><a href="#prodi">Program Studi</a></li>
           <li><a href="#tentang">Tentang</a></li>
-          <li><a href="login.php">Login</a></li>
+          <li><a href="<?= BASE_URL ?>/auth/login.php">Login</a></li>
         </ul>
       </div>
       <div class="col-6 col-lg-2">
