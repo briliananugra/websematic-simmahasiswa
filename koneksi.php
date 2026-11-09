@@ -6,8 +6,9 @@ $password = "";
 $database = "sim_mahasiswa";
 $port     = 3306;
 
-// Kalau ada config.php (di hosting), nilainya menimpa default di atas
-if (file_exists(__DIR__ . '/config.php')) {
+// Di hosting, config.php menimpa default. Di localhost, config.php diabaikan.
+$lokal = in_array($_SERVER['SERVER_NAME'] ?? '', ['localhost', '127.0.0.1']);
+if (!$lokal && file_exists(__DIR__ . '/config.php')) {
     require __DIR__ . '/config.php';
 }
 

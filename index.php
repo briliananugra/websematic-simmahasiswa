@@ -1,11 +1,6 @@
 <?php
 require_once __DIR__ . '/koneksi.php';
-
-function e($t) { return htmlspecialchars((string)$t, ENT_QUOTES, 'UTF-8'); }
-function hitung($koneksi, $sql) {
-    $r = mysqli_query($koneksi, $sql);
-    return $r ? (int) mysqli_fetch_row($r)[0] : 0;
-}
+require_once __DIR__ . '/helper.php';
 
 // Data universitas
 $r = mysqli_query($koneksi, "SELECT * FROM universitas ORDER BY id_universitas LIMIT 1");
