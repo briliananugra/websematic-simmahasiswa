@@ -86,3 +86,10 @@ body { font-family: "Segoe UI", system-ui, sans-serif; color: #1c2540; }
 .kartu-stat i { font-size: 2rem; color: var(--biru); }
 .kartu-stat .angka { font-size: 1.7rem; font-weight: 800; color: var(--biru-tua); line-height: 1; }
 @media (max-width: 768px) { .app-side { display: none; } }
+
+/* Cetak laporan: sembunyikan topbar, sidebar, dan form pilihan */
+@media print {
+  .navbar, .app-side, .no-print { display: none !important; }
+  .app-main { padding: 0 !important; }
+  body { background: #fff !important; }
+}
