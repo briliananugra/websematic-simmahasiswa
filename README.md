@@ -72,16 +72,18 @@ Semua akun memakai password **`password123`**.
 Untuk hosting, salin `config/config.example.php` menjadi `config/config.php` lalu isi data MySQL hosting.
 
 ## Struktur Folder
-simmahasiswa/
-├── index.php landing page
-├── config/ app.php, koneksi.php, config.example.php
-├── includes/ helper, auth, csrf, layout, topbar, sidebar, _helper, _form
-├── auth/ login.php, logout.php
-├── pages/ dashboard, universitas, role, fakultas*, program_studi*,
-│ pengguna*, mahasiswa*, laporan_mahasiswa
-├── assets/css/ style.css
-└── database/ sim_mahasiswa.sql
 
+```
+simmahasiswa/
+├── index.php            landing page
+├── config/              app.php, koneksi.php, config.example.php
+├── includes/            helper, auth, csrf, layout, topbar, sidebar, *_helper, *_form
+├── auth/                login.php, logout.php
+├── pages/               dashboard, universitas*, role*, fakultas*, program_studi*,
+│                        pengguna*, mahasiswa*, laporan_mahasiswa
+├── assets/css/          style.css
+└── database/            sim_mahasiswa.sql
+```
 
 ## Keterbatasan
 
